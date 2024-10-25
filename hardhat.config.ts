@@ -9,7 +9,7 @@ const config: HardhatUserConfig = {
   solidity: "0.8.27",
 
   networks: {
-    baseSepolia: {
+    basesepolia: {
       url: `https://base-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
       accounts: vars.has("PRIVATE_KEY") ? [vars.get("PRIVATE_KEY")] : [],
     },
@@ -19,7 +19,7 @@ const config: HardhatUserConfig = {
     apiKey: BASE_SCAN_API_KEY,
     customChains: [
       {
-        network: "baseSepolia",
+        network: "basesepolia",
         chainId: 84532,
         urls: {
           apiURL: "https://api-sepolia.basescan.org/api",
